@@ -1,0 +1,69 @@
+file: 		README
+name: 		Binaya Bhattarai
+class: 		CSIS 352
+program: 	assignment 5
+date: 		3/31/2016
+
+* The Graph class is implemented by storing its adjacency matrix
+as a vector of gphVertex objects. A gphVertex models a row in the
+matrix and includes the vertex object itself, and a vector of ints
+which represents the weights of edges going out from the same vertex.
+
+* The program creates an instance of class Graph with the template 
+type City. and tests its methods and underlying memory management.
+
+* There is no input required from the user, and all output is written to the 
+console.
+
+* Tests performed for Graph objects:
+
+method					tests
+----------				-----------------
+constructor			*	no arguments; creates an empty, undirected, and
+						unweighted graph
+					*	one argument of enum type graphType. tested with all 
+						4 graphTypes listed in graph.h
+					*	two arguments of enum type graphType. tested with all 
+						possible combinations of the 4 graphTypes listed in graph.h
+						--tested for exception handling when the two parameters 
+						are mutually contradictory.
+destroy				*	tested by repeatedly creating, then calling destroy on 100000
+						graph objects, using a large object(struct of 100000 ints) as 
+						the template type, to ensure there are no memory leaks
+isEmpty				*	tested on both empty and non-empty graphs
+isFull				*	tested on both full and non-full graphs
+isAdjacentTo		*	tested with parameters that are adjacent, and non-
+						adjacent in both directed and undirected graphs
+						--tested for exception handling when either or both  vertices
+						are not present in the graph
+edgeWeight			*	tested with two vertices that are connected, and two
+						that are not connected.
+						--tested for exception handling when either or both of the two 
+						parameters are not contained in the graph
+edgeCount			* 	tested on graphs that contain and don't contain edges
+vertexCount			*	tested on graphs that contain and don't contain vertices
+insertVertex		*	--tested for exception handling when graph already contains the vertex
+						--tested for exception handling when graph is full
+insertEdge			*	--tested for exception handling when graph already contains the edge
+						--tested for exception handling when either or both vertices are not
+						in the graph
+						--tested for exception handling when edge weight is given for an
+						unweighted graph
+deleteEdge			*	--tested for exception handling when graph does not contain the edge
+deleteVertex		*	--tested for exception handling when graph does not contain the vertex
+findVertex			*	tested with parameters that are both contained and not contained in
+						the graph
+
+* Index of files in this distribution:
+
+file				function				description
+--------------   	-----------------   	----------------------
+main.cpp	 		main                	main function
+
+graph.h       		Graph            		Graph class specification and implementation
+
+city.h				City					City class specification
+
+city.cpp			City					City class implementation
+
+README          	program description 	this file

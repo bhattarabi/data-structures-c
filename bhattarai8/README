@@ -1,0 +1,51 @@
+file: 		README
+name: 		Binaya Bhattarai
+class: 		CSIS 352
+program: 	assignment 8
+date: 		5/4/2016
+
+* HashTable class stores a list of templated items that can be hashed. The hashing function
+is passed to the HashTable's constructor to which the class maintains a public reference.
+Also passed to the constructor is the maximum size of the HashTable. This HashTable implements 
+linear probing to handle collisions that occur during insertion of elements. 
+* Only the types that have overloaded the == operator can be stored in the HashTable.
+Duplicate elements are not allowed to be stored. If for an element, the hashing function returns
+a value greater than the maximum size provisioned for the hashtable, such an element cannot be stored.
+* The internal representation of the hashtable is a vector of pointers to the templated
+type. Pointers were used because assigning NULL to non-existant entries was deemed easier
+than coming up with a dummy value that would fit all types that could be hashed.
+* An instance attribute maintains the number of collisions that have occured. This can be obtained
+by using the Collisions() method.
+
+* The program creates a couple instances of class HashTable, and tests its methods.
+
+* There is no input required from the user, and all output is written to the 
+console.
+
+* Tests performed for HashTable objects:
+
+method					tests
+----------				-----------------
+constructor			*	two arguments; one int for the maximum size allowed
+						a hashing function that takes a reference to the template type and returns an int
+insert				*	one reference argument of the template type.
+						--throws range_error if the hashtable is full, or if the hash value of the item 
+						is greater than the maximum size allowed
+						--throws invalid_argument exception if the item is already in the HashTable
+search				*	tested both with items present in HashTable and absent
+retrieve			*	tested with Symbol objects that have the same symbol and different values
+Collisions			*	tested with creating a number of collision during insertion operations
+
+* Index of files in this distribution:
+
+file				function				description
+--------------   	-----------------   	----------------------
+main.cpp	 		main                	main function
+
+hashtable.h       	HashTable            	HashTable class specification and implementation
+
+symbol.h			Symbol					Symbol class specification
+
+symbol.cpp			Symbol					Symbol class implementation
+
+README          	program description 	this file

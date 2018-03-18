@@ -1,0 +1,40 @@
+file: 		README
+name: 		Binaya Bhattarai
+class: 		CSIS 352
+program: 	assignment 1
+date: 		1/29/2016
+
+* The program creates several instances of the Currency class and tests its
+methods and overloaded operators.
+
+* There is no input required from the user, and all output is written to the 
+console.
+
+* Tests performed for Currency class:
+
+method					tests
+----------				-----------------
+constructor				no argument
+						arguments of type int, float, Currency
+
+arithmetic				arguments of type int, float, Currency 
+operators
+
+relational				arguments of type int, float, Currency 
+operators
+
+stream 					display with or without a dollar sign
+insertion operator		display cents, round, or truncate
+						(all format specifiers provided in Currency.h)
+
+* Index of files in this distribution:
+
+file             function            description
+--------------   -----------------   ----------------------
+currencymain.cpp main                main function
+
+currency.h       currency            Currency class specification
+
+currency.cpp     currency methods    Currency class implementation
+
+README           program description this file

@@ -1,0 +1,59 @@
+file: 		README
+name: 		Binaya Bhattarai
+class: 		CSIS 352
+program: 	assignment 2
+date: 		2/16/2016
+
+* The program creates several instances of class Date and tests its
+methods and overloaded operators.
+
+* There is no input required from the user, and all output is written to the 
+console.
+
+* Tests performed for class Date:
+
+method					tests
+----------				-----------------
+constructor				no argument	(assigns current system date)
+						3 int arguments for month, day and year respectively
+						--tested for exception handling against dates that are
+						not valid in the Gregorian calendar
+						
+setDate					3 int arguments for month, day and year respectively
+						--tested for exception handling against dates that are
+						not valid in the Gregorian calendar
+						
+daysUntil				Date objects less than, and greater than test Date
+
+getDayOfWeek			Date instances of past and future; test results were 
+						compared to the dates of the Windows operating system
+						calendar
+
+arithmetic				int argument for + and - 
+operators				Date argument for - operator
+<all arithmetic			++ and -- operators (pre and post)
+in units of day or		Date argument for = operator
+year, as specified		* + / % operations between Date objects are not
+in date.h>				supported.
+
+relational				Date argument for all 8 operators 
+operators
+
+stream 					display in text or numeric format,
+insertion operator		include or exclude the day of the wek
+						(all format specifiers provided in date.h)
+
+* Index of files in this distribution:
+
+file				function				description
+--------------   	-----------------   	----------------------
+main.cpp		 	main                	main function
+
+date.h       		date            		Date class specification
+
+date.cpp		    date methods    		Date class implementation
+
+dateexception.h		dateexception 			DateException class specification/
+											implementation
+
+README           	program description 	this file

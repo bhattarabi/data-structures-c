@@ -1,0 +1,49 @@
+file: 		README
+name: 		Binaya Bhattarai
+class: 		CSIS 352
+program: 	assignment 3
+date: 		2/22/2016
+
+* The program creates several instances of class Array and tests its
+methods and overloaded operators.
+
+* There is no input required from the user, and all output is written to the 
+console.
+
+* Tests performed for Array objects:
+
+method					tests
+----------				-----------------
+constructor			*	no argument	(doesn't allocate memory. Array needs to be 
+						resized before elements can be added).
+					*	one int argument for Array size. index will start at 0
+						--tested for exception handling in case of size argument
+						being less than 0.
+					*	two int arguments for Array begin and end index.
+						--tested for exception handling in case of begin index 
+						being greater than end index
+					*	two char arguments for Array begin and end index.
+						--tested for exception handling in case of begin index 
+						being greater than end index
+copy constructor	*	tested by passing and returning Array objects to and from	
+						functions
+copy assignment 	*	tested by assigning both empty and non-empty Array objects
+operator
+relational			*	tested for all 6 operators. the details of comparing two  
+operators				array objects are provided in file array.h
+index operator		*	tested for int and char arguments for exception handling in
+						case of out of range aguments
+Resize				*	tested for int argument for exception handling in
+						case of negative integer argument
+destructor			*	tested by passing Array objects to and from functions
+						no memory or pointer errors were found
+
+* Index of files in this distribution:
+
+file				function				description
+--------------   	-----------------   	----------------------
+main.cpp	 		main                	main function
+
+array.h       		Array            		Array class specification and implementation
+
+README          	program description 	this file

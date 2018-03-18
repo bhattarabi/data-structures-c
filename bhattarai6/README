@@ -1,0 +1,60 @@
+file: 		README
+name: 		Binaya Bhattarai
+class: 		CSIS 352
+program: 	assignment 6
+date: 		4/7/2016
+
+* SortedList class inherits publicly from the STL container class list, and provides
+some added functionalities. The most noteworthy would be the private member which is 
+a list::iterator of the template type which lets the user traverse through the list
+elements using methods like current(), next(), prev(), reset(), instead of explicitly 
+using an instance of list::iterator. 
+
+* Because a SortedList instance is always sorted in either ascending or descending order,
+usage of some of the base class list's methods like insert would cause the SortedList
+to be in an illegal state.
+
+* The program creates several instances of class SortedList, and tests its methods.
+
+* There is no input required from the user, and all output is written to the 
+console.
+
+* Tests performed for SortedList objects:
+
+method					tests
+----------				-----------------
+constructor			*	no arguments; creates an empty list to be sorted in ascending order
+					*	one argument of enum type listOrder that specifies the sort order. 
+						tested with both sortOrder types listed in sortedlist.h
+insert				*	one reference argument of the template type.
+						tested on lists sorted in both ascending and descending orders
+reset				*	tested on both empty and non-empty lists sorted in either order
+current				*	tested on both empty and non-empty lists sorted in either order
+						--tested for exception handling when the iterator is beyond the
+						beginning or end of the list
+prev				*	tested on both empty and non-empty lists sorted in either order
+						--tested for exception handling when the iterator is at the
+						beginning of the list
+next				*	tested on both empty and non-empty lists sorted in either order
+						--tested for exception handling when the iterator is at the
+						end of the list
+endOfList			*	tested on both empty and non-empty lists sorted in either order
+inList				*	tested on both empty and non-empty lists sorted in either order
+count				*	tested on both empty and non-empty lists sorted in either order
+						and with parameters that are in the list and also with some that 
+						are not present in the list
+erase				*	tested on both empty and non-empty lists sorted in either order
+						and with parameters that are in the list and also with some that 
+						are not present in the list
+traverse			*	tested with funcitons that access, and also with functions that
+						modify the list
+
+* Index of files in this distribution:
+
+file				function				description
+--------------   	-----------------   	----------------------
+main.cpp	 		main                	main function
+
+sortedlist.h       SortedList            	SortedList class specification and implementation
+
+README          	program description 	this file

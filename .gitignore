@@ -1,0 +1,9 @@
+*_
+*gz
+prac/*
+subs/*
+CSIS*
+a.out
+*/*.o
+*/prog*
+*/*~
